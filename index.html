@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 App</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        input: <input v-model="message" />
+        <br>
+        output: {{ message }} ({{ message.length }})
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    message: 'Hello, Vue 3!'
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
